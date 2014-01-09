@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Forms</title>
+		<link rel="stylesheet" type="text/css" href="styles/styles.css" />
+	</head>
+	<!-- переверстай списки определений, почему только дд? смысл тогда вообще использовать эти списки? 
+	нагугли как использовать списко определений в формах 
+	--- переделал там где списки определений не подходят ---
+	где тег лейбел?
+	--- разобрался и добавил ---
+	где атрибут нейм?
+	--- разобрался и добавил ---
+	где атрибут велью в чекбоксах и радио баттонах???
+	--- разобрался и добавил ---
+	поспешил я с дополнительным заданием :) как кстати с ним успехи?-->
+	
+	<body>
+		<div class="wrapper">
+			<div class="content">
+				<h1>Урок "Формы": теги и их атрибуты.</h1>
+				<h2>Расскажите немного о себе ...</h2>
+				<form action="forma.php" method="post" name="myForm">
+				<!-- action="demo_form.asp" обращение к обработчику -->
+					
+					<fieldset>
+					
+						<legend>Коротко о себе</legend>
+						
+						<ul>
+							<li><label for="name">Имя:</label><input id="name" type="text" name="first_name"/></li>
+							<li><label for="surname">Фамилия:</label><input id="surname" type="text" name="last_name"/></li>
+							<li>Пол:
+								<input id="male" class="margin" checked="checked" type="radio" name="sex" value="Мужской"/><label for="male">Мужской</label>
+								<input id="female" type="radio" name="sex" value="Женский"/><label for="female">Женский</label>
+							</li>
+							<li><label for="age">Возраст:</label><input id="age" type="text" name="age" size="5"/>лет</li>
+						</ul>
+						
+					</fieldset>
+					
+					<fieldset>
+					
+						<legend>Подробнее о себе</legend>
+						
+						<ul>
+							<li><input id="young_man" type="radio" name="gender" value="Молодой человек" checked="checked"/><label for="young_man">Молодой человек</label></li>
+							<li><input id="miss" type="radio" name="gender" value="Девушка"/><label for="miss">Девушка</label></li>
+							<li class="no-padding"><input id="date_of_birth" type="text" size="20" name="date_of_birth"/><label for="date_of_birth">Дата рождения</label></li>
+							<li class="no-padding"><input id="marital_status" type="text" size="20" name="marital_status"/><label for="marital_status">Семейное положение</label></li>
+							<li class="no-padding"><input id="social_status" type="text" size="20" name="social_status"/><label for="social_status">Социальный статус</label></li>
+							<li class="no-padding"><input id="residence" type="text" size="20" name="residence"/><label for="residence">Место жительства</label></li>
+						</ul>
+						
+						<dl>
+							<dt>Что вы обычно делаете на выходных:</dt>
+							<dd><input id="sleep" type="checkbox" name="sleep" value="Сплю"/><label for="sleep">Сплю</label></dd>
+							<dd><input id="hanging_out" type="checkbox" name="hanging_out" value="Гуляю с друзьями"/><label for="hanging_out">Гуляю с друзьями</label></dd>
+							<dd><input id="fishing" type="checkbox" name="fishing" value="Хожу на рыбалку"/><label for="fishing">Хожу на рыбалку</label></dd>
+							<dd><input id="gamer" type="checkbox" name="gamer" value="Играю в игры"/><label for="gamer">Играю в игры</label></dd>
+						</dl>
+						
+						<dl>
+							<dt>Рассказать о Формах в книге, посвященной HTML:</dt>
+							<dd>
+								<select name="select_menu" id="select_menu">
+									<option>Site friquency</option>
+									<option value="10">10</option>
+									<option value="20">20</option>
+								</select>
+							</dd>
+						</dl>
+						
+						<dl>
+							<dt>Сколько книг вы прочитали за свою жизнь:</dt>
+							<dd><input id="books_10" type="radio" name="readed_books" value="Печалька"/><label for="books_10">0-10</label></dd>
+							<dd><input id="books_20" type="radio" name="readed_books" value="Печалька"/><label for="books_20">11-20</label></dd>
+							<dd><input id="books_50" type="radio" name="readed_books" value="Печалька"/><label for="books_50">21-50</label></dd>
+							<dd><input id="books_50_or_more" type="radio" name="readed_books" value="Крутяк"/><label for="books_50_or_more">50+</label></dd>
+						</dl>
+						
+						<dl>
+							<dt>Ваши комментарии:</dt>
+							<dd>
+								<textarea id="comments" name="comments" cols="60" rows="10"></textarea>
+							</dd>
+						</dl>
+						
+						<ul>
+							<li>
+								<select id="multiple_select_menu" name="multiple_select_menu" multiple="multiple">
+									<option value="Первая позиция">Первая позиция</option>
+									<option selected="selected" value="Вторая позиция">Вторая позиция</option>
+									<option value="Третья позиция">Третья позиция</option>
+								</select>
+							</li>
+						</ul>
+						
+					</fieldset>
+					
+					<fieldset>
+					
+						<legend>И в заключение</legend>
+						
+						<ul>
+							<li><input type="text" name="textfield" value="Это поле было введено до вас" disabled="disabled" size="30"/></li>
+							<li><label for="e-mail">Email:</label></li>
+							<li><input id="e-mail" type="text" name="e_mail" size="30"/></li>
+						</ul>
+						
+						<span><b>Хотите подписаться на самую модную рассылку спама?</b></span>
+						
+						<dl>
+							<dt class="italic">Выберите категории</dt>
+							<dd><input id="equipment" type="checkbox" name="equipment" value="Оборудование"/><label for="equipment">Оборудование</label></dd>
+							<dd><input id="lunch" type="checkbox" name="lunch" value="Как приготовить обеды"/><label for="lunch">Как приготовить обеды</label></dd>
+							<dd><input id="million" type="checkbox" name="million" value="Заработай миллионы за два дня!"/><label for="million">Заработай миллионы за два дня!</label></dd>
+						</dl>
+						
+						<dl>
+							<dt>На сколько сложная задача:</dt>
+							<dd><input id="low_complexity" type="radio" name="complexity" value="Совсем нет" checked="checked"/><label for="low_complexity">Совсем нет</label></dd>
+							<dd><input id="average_complexity" type="radio" name="complexity" value="Так себе"/><label for="average_complexity">Так себе</label></dd>
+							<dd><input id="hi_complexity" type="radio" name="complexity" value="Еле справились"/><label for="hi_complexity">Еле справились</label></dd>
+						</dl>
+						
+					</fieldset>
+					
+					<p><input type="submit" value="Отправить"/></p>
+					
+				</form>
+			</div>
+		</div>
+	</body>
+</html>

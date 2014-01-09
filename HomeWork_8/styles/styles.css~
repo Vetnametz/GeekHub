@@ -1,0 +1,181 @@
+/*----------------------------------------------------------------------------------*/
+/*------------------------------RESET DEFAULT STYLES--------------------------------*/
+/*----------------------------------------------------------------------------------*/
+html,body                       { width:100%; height:100%; }
+body                            { padding:0; margin:0; font: 15px Arial, sans-serif; background: url(../images/header_bg.png) repeat-x; color:#4C7689; }
+div,p,a,span,em,strong,img,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,td,tr,form,fieldset,label,select,checkbox,input,textarea {
+	padding:0;
+	margin:0;
+	outline:none;
+	list-style:none;
+}
+select, input, textarea        { font-size:12px; vertical-align:middle; }
+textarea                       { vertical-align:top; }
+:focus                         { outline:none; }
+input[type=submit]             { cursor:pointer; }
+img, fieldset                  { border:0; }
+table                          { border-collapse:collapse; border-spacing:0; }
+a:link, a:visited              { font:15px PT Sans, sans-serif; color:#396375; text-decoration:none; font-weight: bold;}
+a:hover                        { text-decoration:underline; }
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------DEFAULT CLASSES------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.float-r           	           { float:right !important; }
+.float-l                       { float:left !important; }
+.no-float                      { float:none !important; }
+.no-border                     { border:0 !important; }
+.no-bg                         { background:none !important; }
+.no-margin                     { margin:0 !important; }
+.no-padding                    { padding:0 !important; }
+.no-display                    { display:none !important; }
+.display                       { display:block !important; }
+.inline                        { display:inline !important; }
+.overflow                      { overflow:hidden !important; }
+.align-r                       { text-align:right !important; }
+.align-l                       { text-align:left !important; }
+.align-c                       { text-align:center !important; }
+.clear                         { clear:both; }
+
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------WRAPPER--------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.wrapper {
+    width: 900px;
+    margin: 0 auto;
+}
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------HEADER---------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.header {
+    height: 109px;
+}
+.header h1 {
+    float: left;
+    overflow: hidden;
+    height: 72px;
+    width: 167px;
+    margin: 10px 0px 17px 0px;
+}
+.header #menu {
+    float: right;
+    margin-top: 46px;
+    text-transform: uppercase;
+
+}
+.header #menu li {
+    float: left;
+    padding-bottom: 45px;
+    margin-left: 26px;
+}
+.header #menu .current {
+    background: url(../images/header_menu_pointer.png) 50% 100% no-repeat;
+}
+.header #menu .current a {
+    color: #EA2778;
+}
+.header .centered-menu {
+    position: relative;
+    float: left;
+    overflow: hidden;
+    width: 298px;
+}
+.header .social-net-links {
+    float: left;
+    position: relative;
+    left: 50%;
+    margin-top: 45px;
+}
+.header .social-net-links li {
+    display: block;
+    float: left;
+    position: relative;
+    right: 50%;
+    height: 23px;
+    width: 23px;
+    margin-left: 10px;
+    border-radius: 50px;
+}
+.header .social-net-links .facebook {
+    background: #C186AA url(../images/header_fb_icon.png) center center no-repeat;
+}
+.header .social-net-links .vk {
+    background: #C186AA url(../images/header_B_icon.png) center center no-repeat;
+}
+.header .social-net-links .twitter {
+    background: #C186AA url(../images/header_twitter_icon.png) center center no-repeat;
+}
+.header .social-net-links .youtube {
+    background: #C186AA url(../images/header_youtube_icon.png) center center no-repeat;
+}
+.header .social-net-links .vimeo {
+    background: #C186AA url(../images/header_v_icon.png) center center no-repeat;
+}
+.header .social-net-links li a span {
+    display: block;
+    text-indent: -9999px;
+}
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------CONTENT--------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.content h2 {
+    font: 56px PT sans, sans-serif;
+    color: #4C7689;
+    border-bottom: 1px solid #A7C3CF;
+}
+.content .team .odd,.even {
+    height: 205px;
+}
+.content .team .odd h3,.even h3 {
+    float: left;
+    width: 170px;
+    margin: 45px 0px 0px 0px;
+    font: 28px PT sans, sans-serif;
+    color: #EA2778;
+    text-align: right;
+    line-height: 28px;/*в процентах мы это не задаем, ок, переделал*/
+}
+.content .team .odd span,.even span {
+    font: 12px Arial, sans-serif;
+    color: #F2753D; /*ак ты меряешь цвета? - пипеткой в фаерворксе, да и если просто клацнуть по этому блоку там есть цвет.. ок*/
+}
+.content .team .odd img,.even img {
+    float: left;
+    height: 165px;
+    width: 165px;
+    margin: 0px 21px 0px 21px; /*минусового маржина точно нужно избегать, ок, изменил, но что лучше: использовать минусовые значения или дописать хоть отдну дополнительную строку?? дополнительная строка - это нормально*/
+    padding: 5px;
+    border-radius: 100px;
+    border: 3px dashed #4C7689;
+}
+.content .team .odd p, .even p {
+    margin: 28px 0px 0px 0px;
+    padding-top: 35px;
+}
+.content .team .even h3 {
+    text-align: left;
+}
+.content .team .even p {
+    text-align: right;
+}
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------FOOTER---------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.footer {
+    height: 25px;
+    padding: 15px;
+    border-top: 1px solid #A7C3CF;
+}
+.footer #footer-menu {
+    float: left;
+    text-transform: uppercase;
+}
+.footer #footer-menu li {
+    display: inline;
+    margin-right: 21px;
+}
+.footer p {
+    float: right;
+}
+.active a {
+    color: #EA2778;
+}

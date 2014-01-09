@@ -1,0 +1,213 @@
+/*----------------------------------------------------------------------------------*/
+/*------------------------------RESET DEFAULT STYLES--------------------------------*/
+/*----------------------------------------------------------------------------------*/
+html,body                       { width:100%; height:100%; }
+
+body                            { padding:0; margin:0; font: 14px/19px Arial, sans-serif; background: url(../images/body_bg.png) repeat-x; color:#444444; }
+div,p,a,span,em,strong,img,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,td,tr,form,fieldset,label,select,checkbox,input,textarea {
+	padding:0;
+	margin:0;
+	outline:none;
+	list-style:none;
+}
+select, input, textarea        { font-size:12px; vertical-align:middle; }
+textarea                       { vertical-align:top; }
+:focus                         { outline:none; }
+input[type=submit]             { cursor:pointer; }
+img, fieldset                  { border:0; }
+table                          { border-collapse:collapse; border-spacing:0; }
+
+a:link, a:visited              { font: 14px Arial, sans-serif; color:#555555; text-decoration:none; }
+a:hover                        { text-decoration:underline; }
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------DEFAULT CLASSES------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.float-r           	           { float:right !important; }
+.float-l                       { float:left !important; }
+.no-float                      { float:none !important; }
+.no-border                     { border:0 !important; }
+.no-bg                         { background:none !important; }
+.no-margin                     { margin:0 !important; }
+.no-padding                    { padding:0 !important; }
+.no-display                    { display:none !important; }
+.display                       { display:block !important; }
+.inline                        { display:inline !important; }
+.overflow                      { overflow:hidden !important; }
+.align-r                       { text-align:right !important; }
+.align-l                       { text-align:left !important; }
+.align-c                       { text-align:center !important; }
+.clear                         { clear:both; }
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------WRAPPER--------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.wrapper {
+    width: 780px;
+    margin: 0 auto;
+}
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------HEADER---------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.header {
+    height: 163px;
+    /*padding: 41px 26px 39px 0px*/
+    border-bottom: 1px solid #939598;
+}
+.header a img {
+    float: left;
+}
+.header span {
+    display: block;
+    float: left;
+    overflow: hidden;
+    width: 112px;
+    padding: 15px 0px 0px 0px;
+    font: 21px Myriad Pro, serif;
+    text-transform: lowercase;
+    color: #939597;
+}
+.header .reg-signin {
+    /*margin-left: 79%;*/
+    float: right;
+    height: 25px;
+    width: 160px;
+    padding-top: 3px;
+    background: url(../images/bg_reg_signin.png) no-repeat;
+    text-align: center;
+    text-transform: lowercase;
+    font-size: 11px;
+}
+.header .reg-signin  li,.main-nav li {
+    display: inline;
+ }
+.header .reg-signin  li a {
+    display: inline;
+    color: #939597;
+}
+.header .reg-signin .current a,.header .reg-signin .current a:hover,
+.header .main-nav .current a,.header .main-nav .current a:hover {
+    color: #45B8FB;
+}
+.header h1 {
+    padding-top: 40px;
+}
+.header h2 {
+    padding-top: 15px;
+    font-size: 15px;
+    color: #929498;
+    text-align: center;
+}
+.header .main-nav {
+    float: right;
+    overflow: hidden;
+    height: 45px;
+    width: 400px;
+    margin: 45px 25px 0px 0px;
+    padding: 13px 0px 0px 0px;
+    background: url(../images/bg_main_nav.png) no-repeat;
+    font-size: 15px;
+    text-align: center;
+}
+.header .main-nav li {
+    margin: 0px 23px 0px 30px;
+}
+.header .main-nav li a {
+    color: #939597;
+}
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------NAV------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.side-bar {
+    float: left;
+    overflow: hidden;
+    width: 232px;
+}
+.side-bar .nav .category {
+    padding: 30px 0px 0px 0px;
+    font-size: 20px;
+    color: #45B8FB;
+    background: url(../images/category_dropdown_arrow.png) 120px 37px no-repeat;
+}
+.side-bar .nav-category {
+    padding: 30px 0px 0px 0px;
+}
+.side-bar .nav-category li {
+    padding: 5px 0px 5px 23px;
+    border-bottom: 1px solid #C5C4C4;
+    background: url(../images/category_nav_arrow.png) left center no-repeat;
+}
+.side-bar .category .nav-category .last-chd {
+    border-bottom: 0;
+}
+.side-bar .contact-us .rss {
+    margin-top: 40px;
+    padding: 15px;
+    border-top: 1px solid #C5C4C4;
+    border-bottom: 1px solid #C5C4C4;
+    text-align: center;
+}
+.side-bar .contact-us .rss span {
+    position: relative;
+}
+.side-bar .contact-us .rss img {
+    position: absolute;
+    z-index: 1;
+    top: 778px;
+    left: 385px;
+}
+.side-bar .company-partners {
+    margin-top: 35px;
+    text-align: center;
+}
+.side-bar .company-partners span {
+    display: block;
+    text-indent: -9999px;
+}
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------CONTENT--------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.content {
+    margin-left: 233px;
+    padding: 82px 0px 0px 19px;
+    text-align: justify;
+    border: 1px solid red;
+}
+.content .page-title {
+    padding: 0px 0px 12px 0px;
+    border-bottom: 1px solid #45B8FB;
+    font-size: 26px;
+}
+.content .logo {
+    float: left;
+    overflow: hidden;
+    width: 105px;
+    border: 1px solid green;
+}
+.content .company-info {
+    margin-left: 106px;
+    border: 1px solid yellow;
+    font-size: 12px;
+}
+.content .company-info table {
+    border: 1px dashed blue;
+}
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------SIDEBAR--------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------FOOTER---------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.footer {
+    clear: both;
+    margin: 60px 0px 0px 0px;
+    padding: 9px 11px;
+    border-top: 1px solid #939598;
+    font-size: 10px;
+    color: #939598;
+}
+.footer a {
+    /*что-то тут не так с фонт сайзом*/
+    /*да ... для ссылки не изменил*/
+    font-size: 10px;
+    color: #000000;
+}

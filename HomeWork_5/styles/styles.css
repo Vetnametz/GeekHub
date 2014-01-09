@@ -1,0 +1,128 @@
+﻿/*----------------------------------------------------------------------------------*/
+/*------------------------------RESET DEFAULT STYLES--------------------------------*/
+/*----------------------------------------------------------------------------------*/
+html,body                       { width:100%; height:100%; }
+body                            { padding:0; margin:0; font:12px Tahoma, sans-serif; background:#EEF2FB; color:#000; }
+/*этого бг в макете не было :)*/
+div,p,a,span,em,strong,img,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,td,tr,form,fieldset,label,select,checkbox,input,textarea {
+	padding:0;
+	margin:0;
+	outline:none;
+	list-style:none;
+}
+select, input, textarea        { font-size:12px; vertical-align:middle; }
+textarea                       { vertical-align:top; }
+:focus                         { outline:none; }
+input[type=submit]             { cursor:pointer; }
+img, fieldset                  { border:0; }
+table                          { border-collapse:collapse; border-spacing:0; }
+a:link, a:visited              { font:12px Tahoma, sans-serif; color:#FF0000; text-decoration:underline; }
+a:hover                        { text-decoration:none; }
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------DEFAULT CLASSES------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.float-r           	           { float:right !important; }
+.float-l                       { float:left !important; }
+.no-float                      { float:none !important; }
+.no-border                     { border:0 !important; }
+.no-bg                         { background:none !important; }
+.no-margin                     { margin:0 !important; }
+.no-padding                    { padding:0 !important; }
+.no-display                    { display:none !important; }
+.display                       { display:block !important; }
+.inline                        { display:inline !important; }
+.overflow                      { overflow:hidden !important; }
+.align-r                       { text-align:right !important; }
+.align-l                       { text-align:left !important; }
+.align-c                       { text-align:center !important; }
+.clear                         { clear:both; }
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------WRAPPER--------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.wrapper {
+	width: 1153px; 
+	height: 774px;/*высоту нельзя задавать таким глобальным элементам*/
+	margin: 51px auto;/*отступы сверху и снизу - ок, но не 50 пикс, посмотри макет*/
+	padding: 15px 15px 20px 15px;/*это тоже тут лишнее*/
+	border: 1px solid black;/*бордера не было в макете*/
+	background: #FFFFFF;/*не нужно задавать тут бг, он и так белый*/
+}
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------HEADER---------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------NAV------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------CONTENT--------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+/*поправь свои коменты (кодировка не та), из-за этого не могу написать своих коментов там где ты их писал.. домашку прийдется допроверять потом */
+p {
+	padding: 15px 0px;
+}
+h1 { /* ñòó÷èìñÿ êî âñåì h1 â ëþáîì div*/
+	color: #FFFFFF;
+	padding: 10px 10px; /* öåíòðóåì h1 â äèâå */
+}
+h2 {
+padding: 10px 0px;
+}
+h3 {
+	padding: 10px 0px;
+	color: #0A249D;
+	font-weight: 600;
+}
+strong,b {
+	font-weight: 600; /*не нужно такого*/
+}
+li {
+	list-style-type: circle;
+	margin-left: 30px;
+	padding: 5px;
+}
+/*поменяешь названия классов - все тут поменяется.*/
+.content div:first-child { /* ñòó÷èìñÿ ê ïåðâîìó ðåáåíêó div ðîäèòåëÿ content*/
+	height: 50px;
+	background: #000000;
+}
+.content .li_square { /* íàçíà÷àåì âñåì li ñ êëàññîì li_square â content êâàäðàòíûå ìàðêåðû*/
+	list-style: square;
+}
+.content .li_margin { /* íàçíà÷àåì âñåì li ñ êëàññîì li_margin â content îòñòóïû*/
+	padding: 5px;
+	margin: 0px 30px;
+}
+.content span {
+	color: #EFFB3C;
+	background: #000000;
+	font: 14px Tahoma, sans-serif;
+	font-weight: 600;
+}
+div.historical_note { /* íàçíà÷àåì âñåì div ñ historical_note  */
+	height: 60px;
+	display: table-cell;     /*îòîáðàæàåì äèâ êàê òàáëè÷íóþ ÿ÷åéêó äëÿ öåíòðîâàíèÿ òåêñòà âíóòðè äèâà, íå ðàáîòàåò â IE äî âåðñèè 8*/
+	vertical-align: middle;  /*óñòàíàâëèâàåì òåêñò â ÿ÷åéêå âåðòèêàëüíî*/
+	border: 2px solid #105D3D;
+	background: #CCCCCC;
+}
+.commercial_optimization {
+	height: 138px;
+	width: 440px;
+	margin: 0 auto;
+	background: #006600;
+	border-top: 2px dashed #EFFB3C;
+	border-bottom: 2px dashed #EFFB3C;
+	font: 16px Tahoma, sans-serif;
+	color: #EFFB3C;
+	padding: 25px 40px;
+	font-weight: 600;
+}
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------SIDEBAR--------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------FOOTER---------------------------------------*/
+/*----------------------------------------------------------------------------------
