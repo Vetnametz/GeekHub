@@ -7,7 +7,7 @@
 /*------------------------------RESET DEFAULT STYLES--------------------------------*/
 /*----------------------------------------------------------------------------------*/
 html,body                       { width:100%; height:100%; }
-body                            { padding:0; margin:0; font:14px BookAntiqua, sans-serif; background:#fff; color:#000; }
+body                            { padding:0; margin:0; font:14px Trebuchet, sans-serif; background:#fff; color:#000; }
 body                            { background: url("../images/header_body_bg.png")top center no-repeat;}
 div,p,a,span,em,strong,img,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,td,tr,form,fieldset,label,select,checkbox,input,textarea {
     padding:0;
@@ -21,7 +21,7 @@ textarea                       { vertical-align:top; }
 input[type=submit]             { cursor:pointer; }
 img, fieldset                  { border:0; }
 table                          { border-collapse:collapse; border-spacing:0; }
-a:link, a:visited              { font:12px Tahoma, sans-serif; color:#000; text-decoration:underline; }
+a:link, a:visited              { font:14px Trebuchet, sans-serif; color:#000; text-decoration:underline; }
 a:hover                        { text-decoration:none; }
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------DEFAULT CLASSES------------------------------*/
@@ -64,7 +64,7 @@ a:hover                        { text-decoration:none; }
 .header .main-nav {
     float: left;
     overflow: hidden;
-    margin: 25px 0px 0px 48px;
+    margin: 25px 0px 0px 30px;
     padding-bottom: 8px;
     background: url("../images/main_nav_shadow.fw.png") center bottom no-repeat;
 }
@@ -72,7 +72,7 @@ a:hover                        { text-decoration:none; }
     display: inline-block;
     /*float: right;*/
     margin-left: 10px;
-    padding: 10px 10px 20px 10px;
+    padding: 10px 5px 20px 5px;
 }
 .header .main-nav li:last-child {
     padding: 10px 0px 10px 10px;
@@ -101,6 +101,7 @@ a:hover                        { text-decoration:none; }
     border: none
 }
 .header .autorization-nav a {
+    font-size: 12px;
     color: #A5AA3A;
 }
 /*----------------------------------------------------------------------------------*/
@@ -123,9 +124,10 @@ a:hover                        { text-decoration:none; }
 }
 .content .slogan h2 {
     margin-top: 37%;
-    font-style: italic;
+    font: italic 24px BookAntiqua sans-serif;
     color: #ffffff;
     text-indent: 30px;
+    line-height: 29px;
 }
 .content .main-photo {
     /*height: 263px;*/
@@ -136,10 +138,45 @@ a:hover                        { text-decoration:none; }
 }
 .content .left-sidebar-wrapper {
     clear: both;
-    width: 300px;
+    width: 295px;
 }
 .content .left-sidebar {
     float: left;
+}
+.content .left-sidebar .mission dl,
+.content .left-sidebar .mission p,
+.content .left-sidebar .next-event dl,
+.content .left-sidebar .next-event p,
+.content .left-sidebar .recent-event dl,
+.content .left-sidebar .recent-event p,
+.main-content .latest-buzz-wrapper {
+    padding: 10px 15px 10px 15px;
+    background: #fcfbef;
+    border-radius: 10px;
+}
+.content .left-sidebar dt strong {
+    float: left;
+    overflow: hidden;
+    width: 60px;
+    padding-right: 10px;
+    text-align: center;
+}
+.content .left-sidebar dd a{
+    display: block;
+    overflow: hidden;
+    margin-bottom: 15px;
+    font: 14px/14px BookAntiqua sans-serif;
+    color: #5f7232;
+}
+.content h3 {
+    padding: 10px 0px 10px 0px;
+    font: 32px BookAntiqua, sans-serif;
+    line-height: 38px;
+    color: #607332;
+}
+.main-content {
+    overflow: hidden;
+    padding-left: 10px;
 }
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------SIDEBAR--------------------------------------*/
