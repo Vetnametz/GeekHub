@@ -1,3 +1,8 @@
+@font-face
+{
+    font-family: BookAntiqua;
+    src: url(../fonts/BKANT.TTF);
+}
 /*----------------------------------------------------------------------------------*/
 /*------------------------------RESET DEFAULT STYLES--------------------------------*/
 /*----------------------------------------------------------------------------------*/
@@ -60,12 +65,31 @@ a:hover                        { text-decoration:none; }
 .header .main-nav {
     float: left;
     overflow: hidden;
-    margin: 75px 0px 0px 70px;
-    background: blue;
+    margin: 25px 0px 0px 48px;
+    padding-bottom: 8px;
+    background: url("../images/main_nav_shadow.fw.png") center bottom no-repeat;
 }
 .header .main-nav li {
-    display: inline;
-    float: right;
+    display: inline-block;
+    /*float: right;*/
+    margin-left: 10px;
+    padding: 10px 10px 20px 10px;
+}
+.header .main-nav li:last-child {
+    padding: 10px 0px 10px 10px;
+}
+.header .main-nav .active {
+    background: linear-gradient(to right,  rgba(170,170,170,1) 0%,rgba(170,170,170,0) 30%), /* W3C */
+                url("../images/main_nav_active_bg_1px.png") repeat-x;
+    background-size: 100% 100%;
+
+
+}
+.header .main-nav .active a{
+    color: #ffffff;
+}
+.header .main-nav a {
+    text-decoration: none;
 }
 .header .autorization-nav {
     float: right;
