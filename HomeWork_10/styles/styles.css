@@ -8,8 +8,7 @@
 /*----------------------------------------------------------------------------------*/
 html,body                       { width:100%; height:100%; }
 body                            { padding:0; margin:0; font:14px BookAntiqua, sans-serif; background:#fff; color:#000; }
-body                            { background: url("../images/header_body_bg.png")top center no-repeat,
-url("../images/footer_body_bg.png")bottom center no-repeat;}
+body                            { background: url("../images/header_body_bg.png")top center no-repeat;}
 div,p,a,span,em,strong,img,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,td,tr,form,fieldset,label,select,checkbox,input,textarea {
     padding:0;
     margin:0;
@@ -82,8 +81,6 @@ a:hover                        { text-decoration:none; }
     background: linear-gradient(to right,  rgba(170,170,170,1) 0%,rgba(170,170,170,0) 30%), /* W3C */
                 url("../images/main_nav_active_bg_1px.png") repeat-x;
     background-size: 100% 100%;
-
-
 }
 .header .main-nav .active a{
     color: #ffffff;
@@ -113,7 +110,37 @@ a:hover                        { text-decoration:none; }
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------CONTENT--------------------------------------*/
 /*----------------------------------------------------------------------------------*/
-
+.content .content-header-wrapper {
+    clear: both;
+}
+.content .slogan {
+    float: left;
+    height: 272px;
+    width: 293px;
+    text-align: center;
+    background: url("../images/slogan_bg_shadow.fw.png") center center no-repeat,
+                url("../images/slogan_bg.fw.png") center center no-repeat;
+}
+.content .slogan h2 {
+    margin-top: 37%;
+    font-style: italic;
+    color: #ffffff;
+    text-indent: 30px;
+}
+.content .main-photo {
+    /*height: 263px;*/
+    /*width: 654px;*/
+    overflow: hidden;
+    padding-top: 10px;
+    background: url("../images/main_photo_shadow.fw.png") center 10px no-repeat;
+}
+.content .left-sidebar-wrapper {
+    clear: both;
+    width: 300px;
+}
+.content .left-sidebar {
+    float: left;
+}
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------SIDEBAR--------------------------------------*/
 /*----------------------------------------------------------------------------------*/
