@@ -104,79 +104,95 @@ a:hover                        { text-decoration:none; }
     font-size: 12px;
     color: #A5AA3A;
 }
+.header .content-header-wrapper {
+    clear: both;
+}
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------NAV------------------------------------------*/
 /*----------------------------------------------------------------------------------*/
-
-/*----------------------------------------------------------------------------------*/
-/*-------------------------------------CONTENT--------------------------------------*/
-/*----------------------------------------------------------------------------------*/
-.content .content-header-wrapper {
+.left-sidebar-wrapper {
     clear: both;
+    width: 295px;
 }
-.content .slogan {
+.left-sidebar {
+    float: left;
+}
+.left-sidebar .slogan {
     float: left;
     height: 272px;
-    width: 293px;
+    width: 295px;
     text-align: center;
     background: url("../images/slogan_bg_shadow.fw.png") center center no-repeat,
-                url("../images/slogan_bg.fw.png") center center no-repeat;
+    url("../images/slogan_bg.fw.png") center center no-repeat;
 }
-.content .slogan h2 {
+.left-sidebar .slogan h2 {
     margin-top: 37%;
     font: italic 24px BookAntiqua sans-serif;
     color: #ffffff;
     text-indent: 30px;
     line-height: 29px;
 }
-.content .main-photo {
-    /*height: 263px;*/
-    /*width: 654px;*/
-    overflow: hidden;
-    padding-top: 10px;
-    background: url("../images/main_photo_shadow.fw.png") center 10px no-repeat;
-}
-.content .left-sidebar-wrapper {
-    clear: both;
-    width: 295px;
-}
-.content .left-sidebar {
-    float: left;
-}
-.content .left-sidebar .mission dl,
-.content .left-sidebar .mission p,
-.content .left-sidebar .next-event dl,
-.content .left-sidebar .next-event p,
-.content .left-sidebar .recent-event dl,
-.content .left-sidebar .recent-event p,
+.left-sidebar .mission dl,
+.left-sidebar .mission p,
+.left-sidebar .next-event dl,
+.left-sidebar .next-event p,
+.left-sidebar .recent-event dl,
+.left-sidebar .recent-event p,
 .main-content .latest-buzz-wrapper {
     padding: 10px 15px 10px 15px;
     background: #fcfbef;
     border-radius: 10px;
 }
-.content .left-sidebar dt strong {
+.left-sidebar dt strong {
     float: left;
     overflow: hidden;
     width: 60px;
     padding-right: 10px;
     text-align: center;
 }
-.content .left-sidebar dd a{
+.left-sidebar dd a{
     display: block;
     overflow: hidden;
     margin-bottom: 15px;
     font: 14px/14px BookAntiqua sans-serif;
     color: #5f7232;
 }
-.content h3 {
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------CONTENT--------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.content .main-photo {
+    /*с этой штукой маленько помучался ... сначала сделал теньку как БГ но потом решил что надо сделать цссную*/
+    /*как сделать ее фигурной так и не понял ...*/
+    /*height: 263px;*/
+    /*width: 654px;*/
+    margin-left: -10px;
+    padding-top: 10px;
+    /*background: url("../images/main_photo_shadow.fw.png") center 10px no-repeat;*/
+    -webkit-box-shadow: -10px 5px 9px 0px rgba(49, 50, 50, 0.55);
+    -moz-box-shadow:    -10px 5px 9px 0px rgba(49, 50, 50, 0.55);
+    box-shadow:         -10px 2px 5px 0px rgba(49, 50, 50, 0.55);
+}
+.content h3,
+.left-sidebar h3 {
     padding: 10px 0px 10px 0px;
-    font: 32px BookAntiqua, sans-serif;
-    line-height: 38px;
+    font: 32px/38px BookAntiqua, sans-serif;
     color: #607332;
 }
-.main-content {
+.content {
     overflow: hidden;
     padding-left: 10px;
+}
+.content .about-us-wrapper {
+    padding: 25px 25px 10px 20px;
+    background: #8a993c;
+    border-radius: 10px;
+    color: #ffffff;
+}
+.content .about-us-wrapper img {
+    float: right;
+}
+.content .about-us-wrapper p {
+    margin-bottom: 30px;
 }
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------SIDEBAR--------------------------------------*/
