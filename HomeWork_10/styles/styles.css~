@@ -1,0 +1,264 @@
+@font-face
+{
+    font-family: BookAntiqua;
+    src: url(../fonts/BKANT.TTF);
+    /*посмотри как в font squirrel генерится код*/
+    /*я понял как подключать фонты с гугла и т.д., но этого шрифта там нет*/
+    /*я понимаю, что его там нет :) в фонт скуирел можно залить фонт и он сам нужный код сгенерит*/
+    /*там где андерлайн на линках - он должен убираться на ховере.. почему-то не везде такое вижу*/
+}
+
+/*----------------------------------------------------------------------------------*/
+/*------------------------------RESET DEFAULT STYLES--------------------------------*/
+/*----------------------------------------------------------------------------------*/
+html,body                       { width:100%; height:100%; }
+body                            { padding:0; margin:0; font: 14px/21px Trebuchet MS, sans-serif; background:#fff; color:#000; }
+div,p,a,span,em,strong,img,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,td,tr,form,fieldset,label,select,checkbox,input,textarea {
+    padding:0;
+    margin:0;
+    outline:none;
+    list-style:none;
+}
+select, input, textarea        { font-size:12px; vertical-align:middle; }
+textarea                       { vertical-align:top; }
+:focus                         { outline:none; }
+input[type=submit]             { cursor:pointer; }
+img, fieldset                  { border:0; }
+table                          { border-collapse:collapse; border-spacing:0; }
+a:link, a:visited              { font:14px/21px Trebuchet MS, sans-serif; color:#000; text-decoration:underline; }
+a:hover                        { text-decoration:none; }
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------DEFAULT CLASSES------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.float-r           	           { float:right !important; }
+.float-l                       { float:left !important; }
+.no-float                      { float:none !important; }
+.no-border                     { border:0 !important; }
+.no-bg                         { background:none !important; }
+.no-margin                     { margin:0 !important; }
+.no-padding                    { padding:0 !important; }
+.no-display                    { display:none !important; }
+.display                       { display:block !important; }
+.inline                        { display:inline !important; }
+.overflow                      { overflow:hidden !important; }
+.align-r                       { text-align:right !important; }
+.align-l                       { text-align:left !important; }
+.align-c                       { text-align:center !important; }
+.clear                         { clear:both; }
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------WRAPPER--------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.wrapper-bg {/*слишком высота большая, посмотри как на макете*/
+    background: url("../images/header_body_bg.png")top repeat-x,
+                url("../images/footer_body_bg.png")bottom repeat-x;
+}
+.wrapper {
+    width: 960px;
+    margin: 0 auto;
+}
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------HEADER---------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.header {
+    padding-top: 43px;
+    height: 160px;
+}
+.header h1 {
+    float: left;
+    overflow: hidden;
+    height: 141px;
+    width: 263px;
+}
+.header .main-nav {
+    float: left;
+    overflow: hidden;
+    margin: 25px 0px 0px 30px;
+    padding-bottom: 8px;
+    background: url("../images/main_nav_shadow.fw.png")no-repeat;
+    background-position: 30px bottom;
+}
+.header .main-nav li {
+    display: inline-block;
+    margin-left: 10px;/*зачем ты тут маржин делаешь, если там только паддинг? между лишками никакого отступа не должно быть если ты сделаешь их обе активными..*/
+    padding: 10px 5px 20px 5px;/*все эти размеры не совпадают с макетом, заметь отступ теньки от всего ула, он должен совпадать с линией черной активной менюшки..*/
+}
+.header .main-nav .active {
+    background: url("../images/main_nav_active_bg.fw.png") left center no-repeat;
+    background-size: 100% 100%;
+}
+.header .main-nav .active a{/*посмотри, почему жирность не такая как на макете, скажи мне на занятии*/
+    color: #ffffff;
+}
+.header .main-nav a {
+    text-decoration: none;
+}
+.header .autorization-nav {
+    float: right;
+}
+.header .autorization-nav li {
+    display: inline;
+    padding-left: 10px;
+    border-left: 1px solid #999999;
+}
+.header .autorization-nav li:first-child {
+    padding: 0px 10px 0px 0px;
+    border: none
+}
+.header .autorization-nav a {
+    font-size: 12px;
+    height: 5px;
+    color: #A5AA3A;
+}
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------NAV------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------CONTENT--------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.container {
+    background: url(../images/container_bg.fw.png) center center no-repeat;
+    z-index: -1;
+}
+.container .main-photo {/*ДА .... я ее почти сделал :), аккуратней вырезать мочи уже нет )))) и конает только как бекграунд,
+                        более семантично было бы видеть это фото в ХТМЛе*/
+                        /*да, я делал вариант когда белая полупрозрачная рамочка вырезается вместе со всем бекграундом,
+                        такой вариант намного проще ... и решается благодаря только ЗЕТ-индексам*/
+                        /*плохо, бекграундом не принимаю :)*/
+    position: relative;
+    margin-left: 283px;
+    height: 270px;
+    background: url("../images/main_photo.jpg")right center no-repeat;;
+    -webkit-box-shadow: inset 8px 0px 0px 18px rgba(255,255,255,0.3);
+    -moz-box-shadow: inset 8px 0px 0px 18px rgba(255,255,255,0.3);
+    box-shadow: inset 8px 0px 0px 18px rgba(255,255,255,0.3);
+    /*z-index: -1;*/
+}
+.container .slogan {
+    position: relative;
+    float: left;
+    height: 270px;
+    width: 300px;
+    background: url("../images/slogan_bg.fw.png")center center no-repeat;
+    z-index: 1;
+}
+.container .slogan h2 {
+    width: 180px;
+    margin: 0 auto;
+    padding-top: 110px;
+    font: italic 24px/28px BookAntiqua, sans-serif;
+    color: #ffffff;
+    text-align: right;
+}
+.content h3,
+.left-sidebar h3 {
+    margin: 20px 0px 20px 0px;
+    font: 32px/38px BookAntiqua, sans-serif;
+    color: #607332;
+}
+.content {
+    overflow: hidden;
+    padding-left: 10px;
+}
+.content .short-info-wrapper {
+    padding: 25px 25px 20px 20px;
+    background: #8a993c;
+    border-radius: 10px;
+    color: #ffffff;
+    text-align: center;
+}
+.content .short-info-wrapper img {
+    float: right;
+}
+.content .short-info-wrapper p {
+    margin-bottom: 30px;
+    text-align: left;
+}
+.content h4 {
+    padding-bottom: 10px;
+    color: #dccc3a;
+    font: italic 24px/36px Trebuchet, sans-serif;
+}
+.left-sidebar .go-to a,
+.content .short-info-wrapper a,
+.content .latest-buzz-wrapper a{
+    padding: 10px 50px 10px 0px;
+    color: #5f7232;
+    background: url("../images/arrow_bg.fw.png") center right no-repeat;
+    font: 16px/19px, BookAntiqua, sans-serif;
+    text-decoration: none;
+}
+.content .short-info-wrapper a {
+    color: #ffffff;
+    text-decoration: underline;
+}
+.latest-buzz-wrapper p {
+    margin-bottom: 20px;
+}
+.content .latest-buzz-wrapper a {
+    text-decoration: underline;
+}
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------SIDEBAR--------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.left-sidebar-wrapper {
+    clear: both;
+    width: 295px;
+}
+.left-sidebar {
+    float: left;
+}
+.left-sidebar .mission dl,
+.left-sidebar .mission p,
+.left-sidebar .next-event dl,
+.left-sidebar .next-event p,
+.left-sidebar .recent-event dl,
+.left-sidebar .recent-event p,
+.content .latest-buzz-wrapper {
+    padding: 10px 15px 10px 15px;
+    background: #fcfbef;
+    border-radius: 10px;
+}
+.left-sidebar dt strong {
+    float: left;
+    overflow: hidden;
+    width: 60px;
+    padding-right: 10px;
+    text-align: center;
+}
+.left-sidebar dd a{
+    display: block;
+    overflow: hidden;
+    margin-bottom: 15px;
+    font: 14px/14px BookAntiqua, sans-serif;
+    color: #5f7232;
+}
+.left-sidebar .go-to {
+    text-align: center;
+    margin: 20px 0px 20px 0px;
+}
+.left-sidebar .button-donate {
+    text-indent: -9999px;
+}
+.left-sidebar .button-donate a {
+    display: block;
+    height: 153px;
+    background: url("../images/botton_donate.fw.png") center center no-repeat;
+}
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------FOOTER---------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.footer {
+    height: 195px;
+    margin-top: 100px;
+    font-size: 12px;
+}
+.footer p {
+    padding-top: 100px;
+    color: #8a993b;
+}
+.footer ul{
+    margin-top: -30px;
+    float: right;
+    text-align: right;
+}

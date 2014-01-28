@@ -56,40 +56,12 @@ a:hover                        { text-decoration:underline; }
     width: 167px;
     margin: 10px 0px 17px 0px;
 }
-.header #menu {
-    float: right;
-    margin-top: 46px;
-    text-transform: uppercase;
-
-}
-.header #menu li {
-    float: left;
-    padding-bottom: 45px;
-    margin-left: 26px;
-}
-.header #menu .current {
-    background: url(../images/header_menu_pointer.png) 50% 100% no-repeat;
-}
-.header #menu .current a {
-    color: #EA2778;
-}
-.header .centered-menu {
-    position: relative;
-    float: left;
-    overflow: hidden;
-    width: 298px;
-}
 .header .social-net-links {
-    float: left;
-    position: relative;
-    left: 50%;
-    margin-top: 45px;
+    padding-top: 45px;
+    text-align: center;
 }
 .header .social-net-links li {
-    display: block;
-    float: left;
-    position: relative;
-    right: 50%;
+    display: inline-block;
     height: 23px;
     width: 23px;
     margin-left: 10px;
@@ -110,14 +82,31 @@ a:hover                        { text-decoration:underline; }
 .header .social-net-links .vimeo {
     background: #C186AA url(../images/header_v_icon.png) center center no-repeat;
 }
-.header .social-net-links li a span {
+.header .social-net-links li a {
     display: block;
     text-indent: -9999px;
+}
+.header #menu {
+    float: right;
+    margin-top: 46px;
+    text-transform: uppercase;
+}
+.header #menu li {
+    float: left;
+    padding-bottom: 45px;
+    margin-left: 26px;
+}
+.header #menu .current {
+    background: url(../images/header_menu_pointer.png) 50% 100% no-repeat;
+}
+.header #menu .current a {
+    color: #EA2778;
 }
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------CONTENT--------------------------------------*/
 /*----------------------------------------------------------------------------------*/
 .content h2 {
+    padding: 10px 0px 5px 0px;
     font: 56px PT sans, sans-serif;
     color: #4C7689;
     border-bottom: 1px solid #A7C3CF;
@@ -125,7 +114,7 @@ a:hover                        { text-decoration:underline; }
 .content .team .odd,.even {
     height: 205px;
 }
-.content .team .odd h3,.even h3 {
+.content .team .odd h3,.even h3 { /*в обращении ко второму потерял .content .team, и так внизе везде*/
     float: left;
     width: 170px;
     margin: 45px 0px 0px 0px;
@@ -145,7 +134,7 @@ a:hover                        { text-decoration:underline; }
     margin: 0px 21px 0px 21px; 
     padding: 5px;
     border-radius: 100px;
-    border: 3px dashed #4C7689;
+    border: 2px dashed #4C7689;
 }
 .content .team .odd p, .even p {
     margin: 28px 0px 0px 0px;
@@ -164,17 +153,22 @@ a:hover                        { text-decoration:underline; }
     height: 25px;
     padding: 15px;
     border-top: 1px solid #A7C3CF;
+    font-size: 11px;
 }
 .footer #footer-menu {
     float: left;
     text-transform: uppercase;
 }
 .footer #footer-menu li {
-    display: inline;
-    margin-right: 21px;
+      display: inline;
+      margin-right: 21px;
+}
+.footer #footer-menu li a{
+    font-size: 11px;
 }
 .footer p {
     float: right;
+    color: #A7C3CF;
 }
 .active a {
     color: #EA2778;

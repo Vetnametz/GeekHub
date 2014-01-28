@@ -1,13 +1,29 @@
 @font-face
-{
+/*{
     font-family: BookAntiqua;
     src: url(../fonts/BKANT.TTF);
+    /*посмотри как в font squirrel генерится код*/
+    /*я понял как подключать фонты с гугла и т.д., но этого шрифта там нет*/
+    /*я понимаю, что его там нет :) в фонт скуирел можно залить фонт и он сам нужный код сгенерит*/
+    /*там где андерлайн на линках - он должен убираться на ховере.. почему-то не везде такое вижу*/
+    /*понял ))))) теперь понял почему и жирность разная )))*/
+}
+
+@font-face {
+    font-family: 'book_antiquaregular';
+    src: url('bkant-webfont.eot');
+    src: url('bkant-webfont.eot?#iefix') format('embedded-opentype'),
+         url('bkant-webfont.woff') format('woff'),
+         url('bkant-webfont.ttf') format('truetype'),
+         url('bkant-webfont.svg#book_antiquaregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 /*----------------------------------------------------------------------------------*/
 /*------------------------------RESET DEFAULT STYLES--------------------------------*/
 /*----------------------------------------------------------------------------------*/
 html,body                       { width:100%; height:100%; }
-body                            { padding:0; margin:0; font:14px Trebuchet, sans-serif; background:#fff; color:#000; }
+body                            { padding:0; margin:0; font: 14px/21px Trebuchet MS, sans-serif; background:#fff; color:#000; }
 div,p,a,span,em,strong,img,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,td,tr,form,fieldset,label,select,checkbox,input,textarea {
     padding:0;
     margin:0;
@@ -20,7 +36,7 @@ textarea                       { vertical-align:top; }
 input[type=submit]             { cursor:pointer; }
 img, fieldset                  { border:0; }
 table                          { border-collapse:collapse; border-spacing:0; }
-a:link, a:visited              { font:14px Trebuchet, sans-serif; color:#000; text-decoration:underline; }
+a:link, a:visited              { font:14px/21px Trebuchet MS, sans-serif; color:#000; text-decoration:underline; }
 a:hover                        { text-decoration:none; }
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------DEFAULT CLASSES------------------------------*/
@@ -43,9 +59,9 @@ a:hover                        { text-decoration:none; }
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------WRAPPER--------------------------------------*/
 /*----------------------------------------------------------------------------------*/
-.wrapper-bg {
-    background: url("../images/header_body_bg.png")top center no-repeat,
-                url("../images/footer_body_bg.png")bottom center no-repeat;
+.wrapper-bg {/*слишком высота большая, посмотри как на макете*/
+    background: url("../images/header_body_bg.png")top repeat-x,
+                url("../images/footer_body_bg.png")bottom repeat-x;
 }
 .wrapper {
     width: 960px;
@@ -69,22 +85,19 @@ a:hover                        { text-decoration:none; }
     overflow: hidden;
     margin: 25px 0px 0px 30px;
     padding-bottom: 8px;
-    background: url("../images/main_nav_shadow.fw.png") center bottom no-repeat;
+    background: url("../images/main_nav_shadow.fw.png")no-repeat;
+    background-position: 30px bottom;
 }
 .header .main-nav li {
     display: inline-block;
-    margin-left: 10px;
-    padding: 10px 5px 20px 5px;
-}
-.header .main-nav li:last-child {
-    padding: 10px 0px 10px 10px;
+    margin-left: 10px;/*зачем ты тут маржин делаешь, если там только паддинг? между лишками никакого отступа не должно быть если ты сделаешь их обе активными..*/
+    padding: 10px 5px 20px 5px;/*все эти размеры не совпадают с макетом, заметь отступ теньки от всего ула, он должен совпадать с линией черной активной менюшки..*/
 }
 .header .main-nav .active {
-    background: linear-gradient(to right,  rgba(170,170,170,1) 0%,rgba(170,170,170,0) 30%), /* W3C */
-                url("../images/main_nav_active_bg_1px.png") repeat-x;
+    background: url("../images/main_nav_active_bg.fw.png") left center no-repeat;
     background-size: 100% 100%;
 }
-.header .main-nav .active a{
+.header .main-nav .active a{/*посмотри, почему жирность не такая как на макете, скажи мне на занятии*/
     color: #ffffff;
 }
 .header .main-nav a {
@@ -104,6 +117,7 @@ a:hover                        { text-decoration:none; }
 }
 .header .autorization-nav a {
     font-size: 12px;
+    height: 5px;
     color: #A5AA3A;
 }
 /*----------------------------------------------------------------------------------*/
@@ -113,17 +127,39 @@ a:hover                        { text-decoration:none; }
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------CONTENT--------------------------------------*/
 /*----------------------------------------------------------------------------------*/
-.content .main-photo {
-    /*с этой штукой маленько помучался ... сначала сделал теньку как БГ но потом решил что надо сделать цссную*/
-    /*как сделать ее фигурной так и не понял ...*/
-    /*height: 263px;*/
-    /*width: 654px;*/
-    margin-left: -10px;
-    padding-top: 10px;
-    /*background: url("../images/main_photo_shadow.fw.png") center 10px no-repeat;*/
-    -webkit-box-shadow: -10px 5px 9px 0px rgba(49, 50, 50, 0.55);
-    -moz-box-shadow:    -10px 5px 9px 0px rgba(49, 50, 50, 0.55);
-    box-shadow:         -10px 2px 5px 0px rgba(49, 50, 50, 0.55);
+.container {
+    background: url(../images/container_bg.fw.png) center center no-repeat;
+    z-index: -1;
+}
+.container .main-photo {/*ДА .... я ее почти сделал :), аккуратней вырезать мочи уже нет )))) и конает только как бекграунд,
+                        более семантично было бы видеть это фото в ХТМЛе*/
+                        /*да, я делал вариант когда белая полупрозрачная рамочка вырезается вместе со всем бекграундом,
+                        такой вариант намного проще ... и решается благодаря только ЗЕТ-индексам*/
+                        /*плохо, бекграундом не принимаю :)*/
+    position: relative;
+    margin-left: 283px;
+    height: 270px;
+    background: url("../images/main_photo.jpg")right center no-repeat;;
+    -webkit-box-shadow: inset 8px 0px 0px 18px rgba(255,255,255,0.3);
+    -moz-box-shadow: inset 8px 0px 0px 18px rgba(255,255,255,0.3);
+    box-shadow: inset 8px 0px 0px 18px rgba(255,255,255,0.3);
+    /*z-index: -1;*/
+}
+.container .slogan {
+    position: relative;
+    float: left;
+    height: 270px;
+    width: 300px;
+    background: url("../images/slogan_bg.fw.png")center center no-repeat;
+    z-index: 1;
+}
+.container .slogan h2 {
+    width: 180px;
+    margin: 0 auto;
+    padding-top: 110px;
+    font: italic 24px/28px BookAntiqua, sans-serif;
+    color: #ffffff;
+    text-align: right;
 }
 .content h3,
 .left-sidebar h3 {
@@ -135,17 +171,17 @@ a:hover                        { text-decoration:none; }
     overflow: hidden;
     padding-left: 10px;
 }
-.content .about-us-wrapper {
+.content .short-info-wrapper {
     padding: 25px 25px 20px 20px;
     background: #8a993c;
     border-radius: 10px;
     color: #ffffff;
     text-align: center;
 }
-.content .about-us-wrapper img {
+.content .short-info-wrapper img {
     float: right;
 }
-.content .about-us-wrapper p {
+.content .short-info-wrapper p {
     margin-bottom: 30px;
     text-align: left;
 }
@@ -155,15 +191,15 @@ a:hover                        { text-decoration:none; }
     font: italic 24px/36px Trebuchet, sans-serif;
 }
 .left-sidebar .go-to a,
-.content .about-us-wrapper a,
+.content .short-info-wrapper a,
 .content .latest-buzz-wrapper a{
     padding: 10px 50px 10px 0px;
     color: #5f7232;
     background: url("../images/arrow_bg.fw.png") center right no-repeat;
-    font: 16px/19px BookAntiqua sans-serif;
+    font: 16px/19px, BookAntiqua, sans-serif;
     text-decoration: none;
 }
-.content .about-us-wrapper a {
+.content .short-info-wrapper a {
     color: #ffffff;
     text-decoration: underline;
 }
@@ -182,21 +218,6 @@ a:hover                        { text-decoration:none; }
 }
 .left-sidebar {
     float: left;
-}
-.left-sidebar .slogan {
-    float: left;
-    height: 272px;
-    width: 295px;
-    text-align: center;
-    background: url("../images/slogan_bg_shadow.fw.png") center center no-repeat,
-    url("../images/slogan_bg.fw.png") center center no-repeat;
-}
-.left-sidebar .slogan h2 {
-    margin-top: 37%;
-    font: italic 24px BookAntiqua sans-serif;
-    color: #ffffff;
-    text-indent: 30px;
-    line-height: 29px;
 }
 .left-sidebar .mission dl,
 .left-sidebar .mission p,
@@ -220,7 +241,7 @@ a:hover                        { text-decoration:none; }
     display: block;
     overflow: hidden;
     margin-bottom: 15px;
-    font: 14px/14px BookAntiqua sans-serif;
+    font: 14px/14px BookAntiqua, sans-serif;
     color: #5f7232;
 }
 .left-sidebar .go-to {

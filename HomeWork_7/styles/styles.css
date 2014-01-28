@@ -107,23 +107,28 @@ a:hover                        { text-decoration:underline; }
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------CONTENT--------------------------------------*/
 /*----------------------------------------------------------------------------------*/
+/*пересмотрел и сравнил все ... */
 .content {
     margin-left: 233px;
     padding: 73px 0px 0px 19px;
     text-align: justify;
+    line-height: 1.5;
 }
 .content .page-title {
     padding: 0px 0px 12px 0px;
     border-bottom: 1px solid #45B8FB;
     font-size: 26px;
+    font-weight: 600;
 }
 .content p {
     padding: 12px 0px 0px 0px;
 }
 .content img {;
-    margin: 15px 0px 30px 0px;
+    margin: 15px 0px 20px 0px;
 }
 .content h3 {
+    font-size: 18px;
+    font-weight: 600;
     color: #45B8FB;
 }
 /*----------------------------------------------------------------------------------*/
@@ -136,11 +141,12 @@ a:hover                        { text-decoration:underline; }
 .footer {
     clear: both;
     margin: 60px 0px 0px 0px;
-    padding: 9px 11px;
+    padding: 9px 0px 25px 11px;
     border-top: 1px solid #939598;
     font-size: 10px;
     color: #939598;
 }
 .footer a {
     color: #000000;
+    font-size: 10px;
 }

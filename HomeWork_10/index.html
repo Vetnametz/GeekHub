@@ -17,9 +17,9 @@
                         <li><a href="#">Sign In</a></li>
                     </ul>
                     <ul class="main-nav">
-                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#">Home</a></li>
                         <li><a href="#">Programs</a></li>
-                        <li><a href="#">Special Events</a></li>
+                        <li class="active"><a href="#">Special Events</a></li>
                         <li><a href="#">Membership</a></li>
                         <li><a href="#">Services</a></li>
                         <li><a href="#">About Us</a></li>
@@ -27,11 +27,18 @@
                     </ul>
                 </div>
 
+
+                <div class="container">
+                    <div class="slogan"><!-- ладно уж, пусть такой маркап будет - сделать только чтобы img был -->
+                        <h2>A Place to Go... A Place to Grow</h2>
+                    </div>
+                    <div class="main-photo">
+                        <!--<img src="images/main_photo.jpg" alt="Happy old age"/>-->
+                    </div>
+                </div>
+
                 <div class="left-sidebar-wrapper">
-                    <ul class="left-sidebar">
-                        <li class="slogan">
-                            <h2>A Place to Go... <br/> A Place to Grow</h2>
-                        </li>
+                    <ul class="left-sidebar"><!-- я в принципе не вижу смысла здесь делать список, потому что ты и так лепишь див врапер.. зачем тогда список? и не очень то и похож он на список.. -->
                         <li class="mission">
                             <h3>Mission Statement</h3>
                             <p>
@@ -42,7 +49,7 @@
                         </li>
                         <li class="next-event">
                             <h3>Next Event</h3>
-                            <dl>
+                            <dl><!-- оно не так выглядит, как на макете :) возвращайся к вопросу того чтобы делать врапер для всего кроме заголовка.. ну и кроме того, стиля для дл и его внутреностей пересмотри (оно не так как на макете) -->
                                 <dt><strong>apr 16</strong></dt>
                                 <dd><a href="#">Lorem Ipsum is simply dummy text</a></dd>
                             </dl>
@@ -69,9 +76,8 @@
                 </div>
 
                 <div class="content">
-                    <img class="main-photo" src="images/main_photo.jpg" alt="Happy old age"/>
                     <h3>Welcome</h3>
-                    <div class="about-us-wrapper">
+                    <div class="short-info-wrapper">
                         <img src="images/ninja_oldies.fw.png" alt="Ninja oldies"/>
                         <p>
                             Lorem Ipsum is simply dummy text of the printing and typesetting industry.
@@ -86,7 +92,7 @@
                         <p>
                             Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                         </p>
-                        <h4>Good Neighbours. Good Friends. Good Fun!</h4>
+                        <h4>Good Neighbours. Good Friends. Good Fun!</h4><!-- здесь обычный спан -->
                         <a class="go-to" href="#">GO to Read More About Us</a>
                     </div>
                     <h3>Latest Buzz</h3>
