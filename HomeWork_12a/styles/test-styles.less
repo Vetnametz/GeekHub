@@ -1,0 +1,162 @@
+@import "bootstrap.min.css";
+@import "styles.css";
+
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------VARAIBLES------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+
+@color_white: rgb( 255, 255, 255 );
+@color_gray: rgb( 156, 156, 156 );
+@color_red: rgb( 150, 0, 0 );
+@color-yellow: rgb( 255, 228, 0 );
+@transparent: rgba(255, 255, 255, 0.0);
+
+@border_radius: 5px;
+@border_strength: 1px;
+@border_style: solid;
+@border_color: green;
+/*----------------------------------------------------------------------------------*/
+/*--------------------------------------MIXIN'S-------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.global-border {
+  border: @border_strength @border_style @border_color;
+}
+/*----------------------------------------------------------------------------------*/
+/*--------------------------------------SIDE-BAR------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.side-bar {
+  .arrow-right {
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 20px;
+    margin-left: 157px;
+    border: @border_strength + 14 @border_style @transparent;
+    border-left-color: @color_white;
+    border-right: 0;
+  }
+  .main-deal {
+    padding: 25px 10px;
+    background: @color_white;
+    font-family: Tahoma,sans-serif;
+    font-size: 22px;
+    border-radius: @border_radius;
+    color: @color_red;
+    span {
+      font-size: 44px;
+      font-weight: 900;
+    }
+  }
+  .menu {
+    li {
+      margin-bottom: 1px;
+      margin-right: -20px;
+      padding: 15px 0px 15px 10px;
+      background: #2a2a2a;
+      border-radius: @border_radius;
+    }
+    &:first-child {
+      margin-top: 20px;
+    }
+    a {
+      font-size: 22px;
+      text-decoration: none;
+      &:hover {
+        color: @color-yellow;
+      }
+    }
+  }
+  .wrapper {
+    height: 240px;
+    background: @color_white;
+    text-align: center;
+    .iphone {
+      height: 230px;
+      margin-top: 120px;
+      padding-top: 70px;
+      background: url("../images/iphone.png")center 10px no-repeat;
+      p {
+        padding: 10px 40px;
+        font-size: 13px;
+        color: @color_white;
+        text-align: left;
+        font-weight: bold;
+        line-height: 1.077;letter-spacing: 1px;
+      }
+    }
+  }
+  .arrow-bottom {
+    width: 0;
+    height: 0;
+    margin-left: 110px;
+    border: @border_strength + 14 @border_style @transparent;
+    border-top-color: @color_white;
+    border-bottom: 0;
+  }
+  .app-store {
+    margin-bottom: 10px;
+  }
+}
+/*----------------------------------------------------------------------------------*/
+/*--------------------------------------CONTENT-------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.content {
+  .content-header-wrapper {
+    background: @color_white;
+    h2 {
+      background: #f2f2f2;
+      margin-top: 15px;
+      padding-top: 10px;
+      padding-left: 10px;
+      font-size: 34px;
+      font-family: "Helvetica";
+      color: rgb( 0, 0, 0 );
+      font-weight: bold;
+      line-height: 0.971;
+    }
+    p {
+      padding-right: 10px;
+      padding-bottom: 10px;
+      padding-left: 10px;
+      background: #f2f2f2;
+      font-size: 17px;
+      font-family: "Helvetica bold";
+      color: @color_gray;
+      line-height: 0.971;
+    }
+    .main-photo,
+    .counter {
+      margin-top: 15px;
+    }
+    .main-photo {
+      width: 48.5%;
+    }
+    .counter {
+      background: rgb(0, 0, 0);
+      .counter-header {
+        padding: 20px 10px;
+        color: @color_gray;
+        li {
+          display: inline;
+        }
+        &:first-child {
+          font-size: 14px;
+          line-height: 1.286;
+        }
+        .timer {
+          float: right;
+          font-size: 26px;
+          font-weight: bold;
+          line-height: 0.692;
+          text-align: right;
+        }
+      }
+    }
+    .likes {
+      background: none;
+      a {
+        color: @color_red;
+      }
+    }
+  }
+}

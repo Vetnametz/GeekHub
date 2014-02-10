@@ -2,7 +2,7 @@
 /*------------------------------RESET DEFAULT STYLES--------------------------------*/
 /*----------------------------------------------------------------------------------*/
 html,body                       { width:100%; height:100%; }
-body                            { padding:0; margin:0; font:12px Myriad Pro, sans-serif; background:#fff; color:#000; }
+body                            { padding:0; margin:0; font:12px Arial, sans-serif; background:#fff; color:#000; }
 div,p,a,span,em,strong,img,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,td,tr,form,fieldset,label,select,checkbox,input,textarea {
 	padding:0;
 	margin:0;
@@ -15,7 +15,7 @@ textarea                       { vertical-align:top; }
 input[type=submit]             { cursor:pointer; }
 img, fieldset                  { border:0; }
 table                          { border-collapse:collapse; border-spacing:0; }
-a:link, a:visited              { font:12px Myriad Pro, sans-serif; color:#000; text-decoration:underline; }
+a:link, a:visited              { font:12px Trebuchet MS, sans-serif; color:#000; text-decoration:underline; }
 a:hover                        { text-decoration:none; }
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------DEFAULT CLASSES------------------------------*/
@@ -114,8 +114,9 @@ a:hover                        { text-decoration:none; }
 }
 .header h3 {
     margin: 30px auto;
-    padding: 90px 0px 0px 0px;
-    font-size: 45px;
+    padding: 45px 0px 0px 0px;
+    font-size: 60px;
+    font-weight: 600;
     color: #1e6b7d;
     line-height: 1.156;
     text-align: center;
@@ -176,10 +177,8 @@ a:hover                        { text-decoration:none; }
 .courses-description img {
     display: block;
     float: left;
-    height: 110px;
-    width: 110px;
+    overflow: hidden;
     margin-right: 10px;
-    padding: 20px;
     border: 3px dashed #CB2E78;
     border-radius: 100px;
 }
@@ -202,8 +201,85 @@ a:hover                        { text-decoration:none; }
 /*-------------------------------------SIDEBAR--------------------------------------*/
 /*----------------------------------------------------------------------------------*/
 .side-bar {
-    width: 900px;
-    margin: 0 auto;
+     width: 900px;
+     margin: 80px auto;
+     color: #246987;
+}
+.side-bar li {
+    display: inline-block;
+    margin-right: 20px;
+}
+.side-bar li h3 {
+    overflow: hidden;
+    width: 275px;
+    text-transform: uppercase;
+    text-align: center;
+    border-bottom: 1px solid #8ea8b3;
+    font-size: 17px;
+    line-height: 1.667;
+    letter-spacing: 10px;
+}
+.side-bar .sponsors {
+    width: 275px;
+    text-align: center;
+}
+.side-bar .sponsors li {
+    display: inline-block;
+    margin: 20px 0px 0px 30px;
+}
+/*.side-bar .sponsors .first-one {*/
+    /*margin-left: 0px;*/
+/*}*/
+.side-bar .sponsors a {
+    display: block;
+}
+.side-bar .sponsors .de a{
+     height: 55px;
+     width: 70px;
+     background-image: url("../images/sponsors_icon_sprite.png");
+ }
+.side-bar .sponsors .de a:hover {
+    background-image: url("../images/sponsor_icon_sprite_hover.png");
+}
+.side-bar .sponsors .master_of_code a{
+    height: 40px;
+    width: 75px;
+    background-image: url("../images/sponsors_icon_sprite.png");
+    background-position: -100px 0px;
+}
+.side-bar .sponsors .master_of_code a:hover {
+    background-image: url("../images/sponsor_icon_sprite_hover.png");
+    background-position: -100px 0px;
+}
+.side-bar .sponsors .gs a{
+    height: 45px;
+    width: 45px;
+    background-image: url("../images/sponsors_icon_sprite.png");
+    background-position: -209px 0px;
+}
+.side-bar .sponsors .gs a:hover {
+    background-image: url("../images/sponsor_icon_sprite_hover.png");
+    background-position: -209px 0px;
+}
+.side-bar .sponsors .unknown_partner_1 a{
+    height: 46px;
+    width: 60px;
+    background-image: url("../images/sponsors_icon_sprite.png");
+    background-position: -55px 295px;
+}
+.side-bar .sponsors .unknown_partner_1 a:hover {
+    background-image: url("../images/sponsor_icon_sprite_hover.png");
+    background-position: -55px 295px;
+}
+.side-bar .sponsors .unknown_partner_2 a{
+    height: 50px;
+    width: 60px;
+    background-image: url("../images/sponsors_icon_sprite.png");
+    background-position: -150px 50px;
+}
+.side-bar .sponsors .unknown_partner_2 a:hover {
+    background-image: url("../images/sponsor_icon_sprite_hover.png");
+    background-position: -150px 50px;
 }
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------FOOTER---------------------------------------*/
