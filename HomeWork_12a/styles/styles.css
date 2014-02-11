@@ -122,12 +122,12 @@ a:hover                        { text-decoration:none; }
     border: none;
     background: url("../images/small_button.png") center center no-repeat;
     vertical-align: middle;
+    color: rgb( 183, 0, 0 );
 }
 .header form button:hover,
 .header form button:focus,
 .header form button:active {
     background: url("../images/small_button.png") center center no-repeat;
-    background-color: rgb(150, 0, 0);
     outline: none;
 }
 /*----------------------------------------------------------------------------------*/

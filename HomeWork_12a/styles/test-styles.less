@@ -114,7 +114,7 @@
       font-weight: bold;
       line-height: 0.971;
     }
-    p {
+    .propose {
       padding-right: 10px;
       padding-bottom: 10px;
       padding-left: 10px;
@@ -149,6 +149,81 @@
           font-weight: bold;
           line-height: 0.692;
           text-align: right;
+        }
+      }
+      .wrapper {
+        background: url("../images/counter_top_bg.png")top repeat-x,
+                    url("../images/counter_r_bg.png")right repeat-y,
+                    url("../images/counter_bottom_bg.png")bottom repeat-x,
+                    url("../images/counter_l_bg.png")left repeat-y;
+        background-color: #2A2A2A;
+        .counter-content {
+          strong {
+            display: block;
+            margin-top: 73px;
+            padding-left: 20px;
+            color: @color_white;
+            font-size: 56px;
+            font-family: Helvetica, sans-serif;
+            font-weight: bold;
+            line-height: 0.321;
+          }
+          button {
+            height: 57px;
+            width: 175px;
+            margin-top: 50px;
+            padding-left: 20px;
+            background: url("../images/big_button.png") center center no-repeat;
+            border: none;
+            vertical-align: middle;
+            font-size: 27px;
+            font-weight: bold;
+            color: @color_red;
+            line-height: 0.6;
+          }
+          button:hover,
+          button:focus,
+          button:active {
+            background: url("../images/big_button.png") center center no-repeat;
+            outline: none;
+          }
+          .gift {
+            margin-top: 15px;
+            padding: 5px 30px;
+            color: @color_white;
+            background: url("../images/gift_icon.png")left center no-repeat;
+          }
+        }
+        .counter-footer {
+          li {
+            display: inline-block;
+            margin-left: 40px;
+            margin-bottom: 10px;
+            padding: 10px;
+            background: #212121;
+            border-radius: @border_radius;
+            text-align: right;
+            span {
+              padding: px;
+              font-size: 14px;
+              color: @color_gray;
+              text-transform: uppercase;
+
+            }
+            p {
+              font-size: 32px;
+              font-family: Helvetica, sans-serif;
+              color: @color-yellow;
+              font-weight: bold;
+              line-height: 0.563;
+            }
+          }
+          .dash {
+            margin: 0;
+            padding: 0;
+            color: @color_white;
+            background: none;
+          }
         }
       }
     }
