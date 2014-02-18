@@ -7,9 +7,13 @@
 
 @color_white: rgb( 255, 255, 255 );
 @color_gray: rgb( 156, 156, 156 );
+@color_gray-light: rgb( 89, 89, 89 );
 @color_red: rgb( 150, 0, 0 );
 @color-yellow: rgb( 255, 228, 0 );
 @transparent: rgba(255, 255, 255, 0.0);
+
+
+@counter_grad: inset 0px 0px 9px 7px rgba(0,0,0,0.75);
 
 @border_radius: 5px;
 @border_strength: 1px;
@@ -102,10 +106,11 @@
 /*----------------------------------------------------------------------------------*/
 .content {
   .content-header-wrapper {
+    border-radius: @border_radius + 5;
     background: @color_white;
     h2 {
       background: #f2f2f2;
-      margin-top: 15px;
+      margin-top: 10px;
       padding-top: 10px;
       padding-left: 10px;
       font-size: 34px;
@@ -126,10 +131,17 @@
     }
     .main-photo,
     .counter {
-      margin-top: 15px;
+      margin-top: 10px;
     }
-    .main-photo {
-      width: 48.5%;
+    .arrow-left {
+      position: absolute;
+      width: 0;
+      height: 0;
+      margin-left: 445px;
+      margin-top: 30px;
+      border: @border_strength + 14 @border_style @transparent;
+      border-right-color: rgb( 0, 0, 0 );
+      border-left: 0;
     }
     .counter {
       background: rgb(0, 0, 0);
@@ -137,30 +149,33 @@
         padding: 20px 10px;
         color: @color_gray;
         li {
-          display: inline;
+          display: inline-block;
         }
         &:first-child {
           font-size: 14px;
           line-height: 1.286;
         }
-        .timer {
+        #timer {
           float: right;
           font-size: 26px;
           font-weight: bold;
           line-height: 0.692;
-          text-align: right;
+          vertical-align: middle;
+          dt,dd {
+            float: left;
+            padding-right: 5px;
+          }
         }
       }
       .wrapper {
-        background: url("../images/counter_top_bg.png")top repeat-x,
-                    url("../images/counter_r_bg.png")right repeat-y,
-                    url("../images/counter_bottom_bg.png")bottom repeat-x,
-                    url("../images/counter_l_bg.png")left repeat-y;
-        background-color: #2A2A2A;
+        background-color: rgb(21,21,21);
+        -webkit-box-shadow: @counter_grad;
+        -moz-box-shadow: @counter_grad;
+        box-shadow: @counter_grad;
         .counter-content {
           strong {
             display: block;
-            margin-top: 73px;
+            margin-top: 33px;
             padding-left: 20px;
             color: @color_white;
             font-size: 56px;
@@ -171,7 +186,7 @@
           button {
             height: 57px;
             width: 175px;
-            margin-top: 50px;
+            margin-top: 10px;
             padding-left: 20px;
             background: url("../images/big_button.png") center center no-repeat;
             border: none;
@@ -195,43 +210,125 @@
           }
         }
         .counter-footer {
+          margin-top: 20px;
           li {
             display: inline-block;
-            margin-left: 40px;
+            padding-left: 5px;
+            padding-right: 5px;
             margin-bottom: 10px;
-            padding: 10px;
             background: #212121;
             border-radius: @border_radius;
-            text-align: right;
-            span {
-              padding: px;
-              font-size: 14px;
-              color: @color_gray;
-              text-transform: uppercase;
-
-            }
-            p {
-              font-size: 32px;
-              font-family: Helvetica, sans-serif;
-              color: @color-yellow;
-              font-weight: bold;
-              line-height: 0.563;
+            dl {
+              text-align: right;
+              dt {
+                font-size: 14px;
+                color: @color_gray;
+                text-transform: uppercase;
+              }
+              dd {
+                font-size: 32px;
+                font-family: Helvetica, sans-serif;
+                color: @color-yellow;
+                font-weight: bold;
+              }
             }
           }
           .dash {
-            margin: 0;
-            padding: 0;
+            padding-left: 0px;
+            padding-right: 0px;
             color: @color_white;
             background: none;
           }
         }
+        ul li:first-child {
+          margin-left: 30px;
+        }
       }
     }
     .likes {
+      float: right;
+      margin-top: 10px;
       background: none;
       a {
-        color: @color_red;
+        color: lighten(@color_red, 30%);
       }
     }
   }
+  .content-main {
+    @border_color: rgb( 203, 203, 203 );
+    margin-top: 50px;
+    border-top: @border_strength @border_style @border_color;
+    .red-rectangle,
+    .gray-rectangle {
+      overflow: hidden;
+      width: 150px;
+      height: 41px;
+      margin-top: -20px;
+      padding-top: 12px;
+      border-radius: @border_radius;
+      color: @color_white;
+      font-size: 18px;
+      text-transform: uppercase;
+      text-align: center;
+      line-height: 1;
+    }
+    .benefits {
+      .odd {
+        p {
+          margin-left: -15px;
+          padding: 20px 0 40px 0;
+          font-size: 13px;
+          line-height: 1.385;
+        }
+        span {
+          color: lighten(@color_red, 30%);
+        }
+      }
+      .even {
+        margin-left: -30px;
+        border-top: @border_strength @border_style @border_color;
+        .red-rectangle {
+          margin-left: 15px;
+        }
+        .map-wrapper {
+          padding: 20px 0;
+        }
+        .address {
+          padding: 20px 0;
+          color: @color_gray-light;
+          ul {
+            li {
+              img {
+                padding: 10px;
+                float: left;
+              }
+              a {
+                color: lighten(@color_red, 30%);
+              }
+            }
+          }
+        }
+      }
+      .red-rectangle {
+        background: @color_red;
+      }
+    }
+    .power {
+      .gray-rectangle {
+        background: #e4e4e4;
+      }
+      p {
+        padding-top: 20px;
+        font-size: 13px;
+        color: @color_gray-light;
+        line-height: 1.385;
+      }
+    }
+  }
+}
+/*----------------------------------------------------------------------------------*/
+/*--------------------------------------FOOTER--------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.footer {
+  background: url("../images/footer_bg.png") bottom left repeat-x;
 }

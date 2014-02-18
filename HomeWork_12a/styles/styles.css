@@ -14,8 +14,7 @@
 html,body                       { width:100%; height:100%; }
 html                            {background-color: #f1eff1;}
 body                            { padding:0; margin:0; font:13px pf_din_text_comp_prolight, sans-serif; color:#000;
-                                background: url("../images/header_bg.png") top left repeat-x,
-                                            url("../images/footer_bg.pngg") bottom left repeat-x;}
+                                background: url("../images/header_bg.png") top left repeat-x;}
 div,p,a,span,em,strong,img,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,td,tr,form,fieldset,label,select,checkbox,input,textarea {
 	padding:0;
 	margin:0;
@@ -58,7 +57,7 @@ a:hover                        { text-decoration:none; }
 /*-------------------------------------HEADER---------------------------------------*/
 /*----------------------------------------------------------------------------------*/
 .header {
-    margin-top: 10px;
+    /*margin-top: 10px;*/
     padding-bottom: 15px;
 }
 .header h1 {
@@ -83,7 +82,7 @@ a:hover                        { text-decoration:none; }
 .header .arrow {
     width: 0;
     height: 0;
-    margin-top: 20px;
+    /*margin-top: 20px;*/
     margin-left: 250px;
     border: 15px solid rgba(255, 255, 255, 0.0);
     border-bottom-color: rgb(150, 0, 0);
