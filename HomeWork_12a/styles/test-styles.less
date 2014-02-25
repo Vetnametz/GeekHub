@@ -4,14 +4,12 @@
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------VARAIBLES------------------------------------*/
 /*----------------------------------------------------------------------------------*/
-
 @color_white: rgb( 255, 255, 255 );
 @color_gray: rgb( 156, 156, 156 );
 @color_gray-light: rgb( 89, 89, 89 );
 @color_red: rgb( 150, 0, 0 );
 @color-yellow: rgb( 255, 228, 0 );
 @transparent: rgba(255, 255, 255, 0.0);
-
 
 @counter_grad: inset 0px 0px 9px 7px rgba(0,0,0,0.75);
 
@@ -34,7 +32,7 @@
     width: 0;
     height: 0;
     top: 20px;
-    margin-left: 157px;
+    margin-left: 164px;
     border: @border_strength + 14 @border_style @transparent;
     border-left-color: @color_white;
     border-right: 0;
@@ -137,7 +135,7 @@
       position: absolute;
       width: 0;
       height: 0;
-      margin-left: 445px;
+      margin-left: 457px;
       margin-top: 30px;
       border: @border_strength + 14 @border_style @transparent;
       border-right-color: rgb( 0, 0, 0 );
@@ -259,7 +257,8 @@
     margin-top: 50px;
     border-top: @border_strength @border_style @border_color;
     .red-rectangle,
-    .gray-rectangle {
+    .gray-rectangle,
+    .dark-grey-rectangle {
       overflow: hidden;
       width: 150px;
       height: 41px;
@@ -324,6 +323,63 @@
         line-height: 1.385;
       }
     }
+    .slider-wrapper {
+      background: #2f2f2f;
+      font-size: 13px;
+      color: rgb( 199, 199, 199 );
+      line-height: 1.385;
+      .dark-grey-rectangle {
+        position: relative;
+        width: 292px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding-top: 12px;
+        background: #464646;
+        z-index: 1;
+      }
+      .top-devider {
+        margin-top: -30px;
+        margin-left: -30px;
+        margin-right: -30px;
+        padding-top: 30px;
+        border-top: @border_strength @border_style rgb( 10, 10, 10 );
+        p {
+          margin-left: 15px;
+          padding-right: 15px;
+          span {
+            color: #ffffff;
+          }
+        }
+        .main-photo {
+          position: relative;
+          background: url("../images/left_bottom_slider_bg.png")left bottom no-repeat;
+          z-index: 2;
+        }
+        .small-photo {
+          ul {
+            .text-odd {
+              width: 250px;
+              font-size: 22px;
+              font-weight: 900;
+              color: @color-yellow;
+            }
+            .text-even {
+              width: 250px;
+            }
+            .clear {
+              margin-bottom: 50px;
+            }
+            li {
+              float: left;
+            }
+          }
+          .photo-item {
+            height: 65px;
+            width: 65px;
+          }
+        }
+      }
+    }
   }
 }
 /*----------------------------------------------------------------------------------*/
@@ -332,3 +388,5 @@
 .footer {
   background: url("../images/footer_bg.png") bottom left repeat-x;
 }
+
+

@@ -1,5 +1,15 @@
 @font-face {
     font-family: 'pf_din_text_comp_prolight';
+    src: url('../fonts/glyphicons-halflings-regular.eot');
+    src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/glyphicons-halflings-regular.woff') format('woff'),
+    url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'),
+    url('../fonts/glyphicons-halflings-regular.svg#pf_din_text_comp_prolight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'pf_din_text_comp_prolight';
     src: url('../fonts/pfdintextcomppro-light-webfont.eot');
     src: url('../fonts/pfdintextcomppro-light-webfont.eot?#iefix') format('embedded-opentype'),
     url('../fonts/pfdintextcomppro-light-webfont.woff') format('woff'),
@@ -46,7 +56,7 @@ a:hover                        { text-decoration:none; }
 .align-r                       { text-align:right !important; }
 .align-l                       { text-align:left !important; }
 .align-c                       { text-align:center !important; }
-.clear                         { clear:both; }
+.clear                         { clear:both;}
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------WRAPPER--------------------------------------*/
 /*----------------------------------------------------------------------------------*/
@@ -136,7 +146,28 @@ a:hover                        { text-decoration:none; }
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------CONTENT--------------------------------------*/
 /*----------------------------------------------------------------------------------*/
-
+.modal {
+    display: none;
+    position: fixed;
+    height: 500px;
+    width: 500px;
+    top: 50%;
+    left: 50%;
+    margin-top: -250px;
+    margin-left: -250px;
+    background: gray;
+}
+.modal.active {
+    display: block;
+}
+.modal img {
+    height: 485px;
+    width: 485px;
+}
+.modal li {
+    font-size: 30px;
+    color: red;
+}
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------SIDEBAR--------------------------------------*/
 /*----------------------------------------------------------------------------------*/
