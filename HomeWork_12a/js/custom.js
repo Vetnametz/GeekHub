@@ -32,11 +32,15 @@ $(document).ready(function countAction(){
     };
     window.onload = function(){countAction()}, setInterval(function(){countAction()}, 1000);
 
-    $('body').append('<div class="modal"><img src=""/></div>');
-
+    $('body').append('<ul class="modal">' +
+                        '<li><a href=""><span class="glyphicon glyphicon-chevron-left"></span></a></li>' +
+                        '<li><img src=""/>' +
+                        '<li><a href="");"><span class="glyphicon glyphicon-chevron-right"></span></a></li>' +
+                     '</ul>');
     var popup = $('.modal'),
         img = $('.wrapper .content .content-main .slider-wrapper .small-photo ul li a img'),
         ancor = $('.wrapper .content .content-main .slider-wrapper .small-photo ul li a'),
+        modal = $('.wrapper .content .content-main .slider-wrapper ul li a')
         left = [],
         right = [],
         srcList = [];
@@ -48,6 +52,7 @@ $(document).ready(function countAction(){
 
         var mySrc = $(this).find('img').attr('src'),
             srcIndexInSrcList = $.inArray(mySrc, srcList);
+
 
         if ( srcIndexInSrcList == -1) {
             srcList.push(mySrc)
