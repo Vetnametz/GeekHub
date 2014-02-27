@@ -1,4 +1,3 @@
-
 $(document).ready(function countAction(){
 
     function countAction(){
@@ -33,17 +32,19 @@ $(document).ready(function countAction(){
     window.onload = function(){countAction()}, setInterval(function(){countAction()}, 1000);
 
     $('body').append('<ul class="modal">' +
-                        '<li><a href=""><span class="glyphicon glyphicon-chevron-left"></span></a></li>' +
-                        '<li><img src=""/>' +
-                        '<li><a href="");"><span class="glyphicon glyphicon-chevron-right"></span></a></li>' +
+                         '<li><a class="left" href=""><span class="glyphicon glyphicon-chevron-left"></span></a></li>' +
+                         '<li><img src=""/>' +
+                         '<li><a class="right" href=""><span class="glyphicon glyphicon-chevron-right"></span></a></li>' +
                      '</ul>');
+
     var popup = $('.modal'),
         img = $('.wrapper .content .content-main .slider-wrapper .small-photo ul li a img'),
         ancor = $('.wrapper .content .content-main .slider-wrapper .small-photo ul li a'),
-        modal = $('.wrapper .content .content-main .slider-wrapper ul li a')
-        left = [],
-        right = [],
-        srcList = [];
+        leftImg ,
+        rightImg,
+        srcList = $(".wrapper .content .content-main .slider-wrapper .small-photo ul li a img").map(function() {
+                    return $(this).attr("src");
+                    }).get();
 
 
     ancor.click(function(event){
@@ -51,20 +52,64 @@ $(document).ready(function countAction(){
         event.preventDefault();
 
         var mySrc = $(this).find('img').attr('src'),
-            srcIndexInSrcList = $.inArray(mySrc, srcList);
+            elIndex = $.inArray(mySrc, srcList);
 
-
-        if ( srcIndexInSrcList == -1) {
-            srcList.push(mySrc)
-            popup.find('img').attr('src', mySrc)
-            popup.addClass('active')
-        } else {
-            popup.find('img').attr('src', srcList[srcIndexInSrcList]);
+        if (elIndex === 0){
+            leftImg = srcList[srcList.length-1]
+            rightImg = srcList[elIndex+1]
+        }
+        if (elIndex === srcList.length-1){
+            leftImg = srcList[elIndex-1]
+            rightImg = srcList[0]
+        }
+        if (elIndex > 0 && elIndex < srcList.length-1){
+            leftImg = srcList[elIndex-1]
+            rightImg = srcList[elIndex+1]
+        }
+        if (!popup.hasClass('active')){
             popup.addClass('active');
         }
+        popup.find('img').attr('src', srcList[elIndex]);
     });
+    $('.modal li .left').click(function(e){
+        e.preventDefault();
+        alert('left')
 
-    popup.click(function(){
-        $(popup).removeClass('active');
+        popup.find('img').attr('src', leftImg);
+    });
+    $('.modal li .right').click(function(e){
+        e.preventDefault();
+        alert('right')
+
+        popup.find('img').attr('src', rightImg);
+    });
+    popup.click(function(e){
+        if (e.target.tagName == 'DIV') {
+            $(this).removeClass('active');
+        }
     });
 });
+//            console.log(mySrc)
+//            console.log($.inArray(mySrc, srcList))
+//
+//
+//
+//
+//
+//
+//            srcIndexInSrcList = $.inArray(mySrc, srcList);
+//
+//        if ( srcIndexInSrcList == -1) {
+//            srcList.push(mySrc)
+//            popup.find('img').attr('src', mySrc)
+//            popup.addClass('active')
+//        } else {
+//            popup.find('img').attr('src', srcList[srcIndexInSrcList]);
+//            popup.addClass('active');
+//        }
+//    });
+//
+//    popup.click(function(){
+//        $(popup).removeClass('active');
+//    });
+//});
