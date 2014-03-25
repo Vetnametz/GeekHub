@@ -46,7 +46,6 @@ $(document).ready(function countAction(){
                     return $(this).attr("src");
                     }).get();
 
-
     ancor.click(function(event){
 
         event.preventDefault();
@@ -54,26 +53,36 @@ $(document).ready(function countAction(){
         var mySrc = $(this).find('img').attr('src'),
             elIndex = $.inArray(mySrc, srcList);
 
-        if (elIndex === 0){
-            leftImg = srcList[srcList.length-1]
-            rightImg = srcList[elIndex+1]
-        }
-        if (elIndex === srcList.length-1){
-            leftImg = srcList[elIndex-1]
-            rightImg = srcList[0]
-        }
-        if (elIndex > 0 && elIndex < srcList.length-1){
-            leftImg = srcList[elIndex-1]
-            rightImg = srcList[elIndex+1]
-        }
         if (!popup.hasClass('active')){
             popup.addClass('active');
         }
         popup.find('img').attr('src', srcList[elIndex]);
+
+//        call function myFunction and pass in it an index
+//        of current src
+        myFunction(elIndex);
     });
+    function myFunction(elIndex){
+        alert('Yes')
+//        get an clicked img index of src
+        if (elIndex === 0){
+            leftImg = srcList[srcList.length-1]
+            rightImg = srcList[elIndex+1]
+        }
+        else if (elIndex === srcList.length-1){
+            leftImg = srcList[elIndex-1]
+            rightImg = srcList[0]
+        }
+        else if (elIndex > 0 && elIndex < srcList.length-1){
+            leftImg = srcList[elIndex-1]
+            rightImg = srcList[elIndex+1]
+        }
+    }
     $('.modal li .left').click(function(e){
         e.preventDefault();
         alert('left')
+
+//        HOW CAN I GET leftImg from myFunction()???????
 
         popup.find('img').attr('src', leftImg);
     });
@@ -89,27 +98,4 @@ $(document).ready(function countAction(){
         }
     });
 });
-//            console.log(mySrc)
-//            console.log($.inArray(mySrc, srcList))
-//
-//
-//
-//
-//
-//
-//            srcIndexInSrcList = $.inArray(mySrc, srcList);
-//
-//        if ( srcIndexInSrcList == -1) {
-//            srcList.push(mySrc)
-//            popup.find('img').attr('src', mySrc)
-//            popup.addClass('active')
-//        } else {
-//            popup.find('img').attr('src', srcList[srcIndexInSrcList]);
-//            popup.addClass('active');
-//        }
-//    });
-//
-//    popup.click(function(){
-//        $(popup).removeClass('active');
-//    });
-//});
+
