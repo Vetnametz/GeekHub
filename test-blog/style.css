@@ -1,0 +1,329 @@
+/*
+Theme Name: Geekhub
+Author: Geekhub Frontend Teachers
+Author URI: http://geekhub.ck.ua/
+Description: This is default Wordpress theme for GeekHub website.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: geekhub
+*/
+
+/*----------------------------------------------------------------------------------*/
+/*------------------------------RESET DEFAULT STYLES--------------------------------*/
+/*----------------------------------------------------------------------------------*/
+html,body                       { width:100%; height:100%; }
+body                            { padding:0; margin:0; font:12px Arial, sans-serif; background:#fff; color:#000; }
+div,p,a,span,em,strong,img,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,td,tr,form,fieldset,label,select,checkbox,input,textarea {
+	padding:0;
+	margin:0;
+	outline:none;
+	list-style:none;
+}
+select, input, textarea        { font-size:12px; vertical-align:middle; }
+textarea                       { vertical-align:top; }
+:focus                         { outline:none; }
+input[type=submit]             { cursor:pointer; }
+img, fieldset                  { border:0; }
+table                          { border-collapse:collapse; border-spacing:0; }
+a:link, a:visited              { font:12px Trebuchet MS, sans-serif; color:#000; text-decoration:underline; }
+a:hover                        { text-decoration:none; }
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------DEFAULT CLASSES------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.float-r           	           { float:right !important; }
+.float-l                       { float:left !important; }
+.no-float                      { float:none !important; }
+.no-border                     { border:0 !important; }
+.no-bg                         { background:none !important; }
+.no-margin                     { margin:0 !important; }
+.no-padding                    { padding:0 !important; }
+.no-display                    { display:none !important; }
+.display                       { display:block !important; }
+.inline                        { display:inline !important; }
+.overflow                      { overflow:hidden !important; }
+.align-r                       { text-align:right !important; }
+.align-l                       { text-align:left !important; }
+.align-c                       { text-align:center !important; }
+.clear                         { clear:both; }
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------WRAPPER--------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.header-wrapper {
+    background: url("images/header_grad_bg.png") bottom repeat-x,
+    url("images/header_colored_circles.png") center bottom no-repeat,
+    url("images/header_main_bg.png") repeat;
+
+}
+
+/*все менюшки не имеют андерлайна на ховере, почему? :)*/
+
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------HEADER---------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.header {
+    width: 900px;
+    height: 450px;
+    margin: 0 auto;
+}
+.header h1 {
+    float: left;
+    overflow: hidden;
+    height: 72px;
+    width: 167px;
+    margin: 10px 0px 17px 0px;
+}
+.header #social-net-links {
+    padding-top: 45px;
+    text-align: center;
+}
+.header #social-net-links li {
+    display: inline-block;
+    margin-left: 10px;
+    border-radius: 50px;
+}
+.header #social-net-links .facebook a{
+    background: url(images/facebook_icon.png) center center no-repeat;
+}
+.header #social-net-links .vk a{
+    background: url(images/vkontate_icon.png) center center no-repeat;
+}
+.header #social-net-links .twitter a{
+    background: url(images/twitter_icon.png) center center no-repeat;
+}
+.header #social-net-links .youtube a{
+    background: url(images/youtube_icon.png) center center no-repeat;
+}
+.header #social-net-links .vimeo a{
+    background: url(images/vimeo_icon.png) center center no-repeat;
+}
+.header #social-net-links li a {
+    display: block;
+    height: 23px;
+    width: 23px;
+    border-radius: 50px;
+    opacity: 0.5;
+    text-indent: -9999px;
+}
+.header #social-net-links a:hover {
+    opacity: 1;
+}
+.header #menu {
+    float: right;
+    margin-top: 46px;
+    text-transform: uppercase;
+}
+.header #menu li {
+    float: left;
+    padding-bottom: 34px;
+    margin-left: 26px;
+}
+.header #menu a {
+    font-weight: 900;
+    color: #1e6b7d;
+    text-decoration: none;
+}
+.header #menu .current a {
+    color: #EA2778;
+}
+.header h3 {
+    margin: 30px auto;
+    padding: 45px 0px 0px 0px;
+    font-size: 60px;
+    font-weight: 600;
+    color: #1e6b7d;
+    line-height: 1.156;
+    text-align: center;
+    text-shadow: 0px 1px 0px rgb( 255, 255, 255 );
+    border-top: 1px solid #8ea8b3;
+
+}
+.header .reg-button {
+    margin: 35px 0px 40px 0px;
+    padding: 30px 58px;
+    background: url("images/header_reg_button.png") center center no-repeat;
+}
+.header .reg-button a {
+    display: block;
+    width: 270px;
+    margin-left: 245px;
+    padding: 15px;
+    font-size: 25px;
+    color: rgb( 255, 255, 255 );
+    line-height: 0.605;
+    text-align: center;
+    text-decoration: none;
+}
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------NAV------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------CONTENT--------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.content {
+    width: 900px;
+    margin: 0 auto;
+    color: #246987;
+}
+.content .main-aim {
+    margin: 40px 50px 0px 130px;
+    text-align: justify;
+    font-size: 15px;
+}
+.content .our-courses {
+    margin: 30px 0px 0px 0px;
+    padding-bottom: 10px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    text-align: center;
+    border-bottom: 1px solid #8ea8b3;
+    font-size: 19px;
+}
+.courses-description {
+    margin-top: 20px;
+}
+.courses-description li {
+    overflow: hidden;
+    width: 440px;
+    margin-bottom: 40px;
+}
+.courses-description img {
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin-right: 10px;
+    border: 3px dashed #CB2E78;
+    border-radius: 100px;
+}
+.courses-description h4 a{
+    font-size: 28px;
+    font-weight: 500;
+    color: rgb( 234, 39, 120 );
+}
+.courses-description p {
+    margin-top: 20px;
+    overflow: hidden;
+}
+.courses-description .left-col {
+    float: left;
+}
+.courses-description .right-col {
+    margin-left: 460px;
+}
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------SIDEBAR--------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.sidebar {
+     width: 900px;
+     margin: 80px auto;
+     color: #246987;
+}
+.sidebar li {
+    display: inline-block;
+    margin-right: 20px;
+}
+.sidebar li h3 {
+    overflow: hidden;
+    width: 275px;
+    text-transform: uppercase;
+    text-align: center;
+    border-bottom: 1px solid #8ea8b3;
+    font-size: 17px;
+    line-height: 1.667;
+    letter-spacing: 10px;
+}
+.sidebar .sponsors {
+    width: 275px;
+    text-align: center;
+}
+.sidebar .sponsors li {
+    display: inline-block;
+    margin: 20px 0px 0px 30px;
+}
+/*.sidebar .sponsors .first-one {*/
+    /*margin-left: 0px;*/
+/*}*/
+.sidebar .sponsors a {
+    display: block;
+}
+.sidebar .sponsors .de a{
+     height: 55px;
+     width: 70px;
+     background-image: url("images/sponsors_icon_sprite.png");/*зачем ты каждый раз повторяешь этот лайн? меняй только бекграунд позишн*/
+ }
+.sidebar .sponsors .de a:hover {
+    background-image: url("images/sponsor_icon_sprite_hover.png");/*тут то же самое*/
+}
+.sidebar .sponsors .master_of_code a{
+    height: 40px;
+    width: 75px;
+    background-image: url("images/sponsors_icon_sprite.png");
+    background-position: -100px 0px;
+}
+.sidebar .sponsors .master_of_code a:hover {
+    background-image: url("images/sponsor_icon_sprite_hover.png");
+    background-position: -100px 0px;
+}
+.sidebar .sponsors .gs a{
+    height: 45px;
+    width: 45px;
+    background-image: url("images/sponsors_icon_sprite.png");
+    background-position: -209px 0px;
+}
+.sidebar .sponsors .gs a:hover {
+    background-image: url("images/sponsor_icon_sprite_hover.png");
+    background-position: -209px 0px;
+}
+.sidebar .sponsors .unknown_partner_1 a{
+    height: 46px;
+    width: 60px;
+    background-image: url("images/sponsors_icon_sprite.png");
+    background-position: -55px 295px;
+}
+.sidebar .sponsors .unknown_partner_1 a:hover {
+    background-image: url("images/sponsor_icon_sprite_hover.png");
+    background-position: -55px 295px;
+}
+.sidebar .sponsors .unknown_partner_2 a{
+    height: 50px;
+    width: 60px;
+    background-image: url("images/sponsors_icon_sprite.png");
+    background-position: -150px 50px;
+}
+.sidebar .sponsors .unknown_partner_2 a:hover {
+    background-image: url("images/sponsor_icon_sprite_hover.png");
+    background-position: -150px 50px;
+}
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------FOOTER---------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.footer {
+    width: 900px;
+    margin: 0 auto;
+    height: 25px;
+    padding: 15px;
+    border-top: 1px solid #A7C3CF;
+    font-size: 11px;
+}
+.footer #footer-menu {
+    float: left;
+    text-transform: uppercase;
+}
+.footer #footer-menu li {
+    display: inline;
+    margin-right: 21px;
+}
+.footer #footer-menu li a{
+    font-size: 11px;
+    font-weight: 900;
+    color: #1e6b7d;
+    text-decoration: none;
+}
+.footer #footer-menu .current a {
+    color: #EA2778;
+}
+.footer p {
+    float: right;
+    color: #A7C3CF;
+}
